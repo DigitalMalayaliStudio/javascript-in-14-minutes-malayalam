@@ -1,7 +1,7 @@
 {
-  "name": "javascript-in-14-minutes",
-  "version": "0.0.1",
-  "description": "JavaScript in 14 minutes",
+  "name": "javascript-in-14-minutes-malayalam",
+  "version": "1.0.0",
+  "description": "The Malayalam translation of JavaScript in 14 Minutes.",
   "keywords": [
     "sass",
     "bulma",
@@ -9,27 +9,38 @@
     "tutorial",
     "javascript"
   ],
-  "author": "Jeremy Thomas <bbxdesign@gmail.com> (https://jgthms.com)",
+  "homepage": "https://github.com/DigitalMalayaliStudio/javascript-in-14-minutes-malayalam#readme",
+  "bugs": {
+    "url": "https://github.com/DigitalMalayaliStudio/javascript-in-14-minutes-malayalam/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigitalMalayaliStudio/javascript-in-14-minutes-malayalam.git"
+  },
   "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^7.1.5",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015-ie": "^6.7.0",
-    "bulma": "^0.6.0",
-    "cssnano": "^3.10.0",
-    "node-sass": "^4.5.3",
-    "postcss-cli": "^4.1.1"
+  "author": "Jeremy Thomas",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
   },
   "scripts": {
     "css-deploy": "npm run css-build && npm run css-autoprefix && npm run css-minify",
-    "css-build": "node-sass _sass/main.sass css/main.css",
+    "css-build": "sass --load-path=node_modules _sass/main.scss css/main.css",
     "css-autoprefix": "postcss --no-map --use autoprefixer --output css/main.css css/main.css",
-    "css-minify": "postcss --no-map --use cssnano --output css/main.min.css css/main.css",
-    "css-watch": "npm run css-build -- --watch",
-    "deploy": "npm run css-deploy && npm run js-build",
-    "js-build": "babel _javascript --out-dir lib",
-    "js-watch": "npm run js-build -- --watch",
-    "start": "npm run css-watch | npm run js-watch"
+    "css-minify": "postcss --no-map --config postcss.config.js --output css/main.min.css css/main.css",
+    "start": "npm run css-build -- --watch"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans-malayalam": "^5.2.8",
+    "autoprefixer": "^10.4.27",
+    "bulma": "^1.0.4",
+    "cssnano": "^7.1.3",
+    "sass": "^1.98.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "postcss": "^8.5.8",
+    "postcss-cli": "^11.0.1"
   }
 }

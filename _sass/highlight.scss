@@ -1,0 +1,47 @@
+@use "variables" as *;
+@use "bulma/sass/utilities" as *;
+
+.highlight {
+  background-color: var(--bulma-pre-background);
+  border-radius: 3px;
+
+  .highlight {
+    color: orange;
+
+    .kd {
+      color: $hl-purple;
+    }
+
+    .mi {
+      color: $hl-red;
+    }
+
+    .nx {
+      color: $hl-blue;
+    }
+
+    .p {
+      color: $hl-black;
+    }
+
+    .s1 {
+      color: $hl-green;
+    }
+
+    .nb {
+      color: $hl-blue;
+    }
+
+    .o {
+      color: $hl-purple;
+    }
+
+    .kc {
+      color: $hl-purple;
+    }
+
+    .k {
+      color: $hl-purple;
+    }
+  }
+}

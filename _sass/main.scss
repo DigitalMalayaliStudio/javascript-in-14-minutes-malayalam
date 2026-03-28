@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+@use "bulma/sass/utilities" with (
+  $family-primary: '"Noto Sans Malayalam Variable", sans-serif'
+);
+
+@use "bulma/sass/base";
+@use "bulma/sass/themes";
+@use "bulma/sass/utilities/mixins" as *;
+@use "bulma/sass/elements/content";
+@use "bulma/sass/form";
+@use "bulma/sass/elements/title";
+@use "bulma/sass/components/message";
+
+@use "layout";
+@use "stamp";
+@use "page-content";
+@use "highlight";
+
+@font-face {
+  font-family: 'Noto Sans Malayalam Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(/fonts/noto-sans-malayalam-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: 'Noto Sans Malayalam Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(/fonts/noto-sans-malayalam-malayalam-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0307,U+0323,U+0951-0952,U+0964-0965,U+0D00-0D7F,U+1CDA,U+1CF2,U+200C-200D,U+20B9,U+25CC,U+A830-A832;
+}
+
+@mixin selection($context: false) {
+  @if $context {
+    &::-moz-selection,
+    &::selection {
+      @content;
+    }
+  } @else {
+    ::-moz-selection,
+    ::selection {
+      @content;
+    }
+  }
+}
+
+.block {
+  @include block;
+}
+
+@include selection {
+  background-color: $s-yellow;
+}

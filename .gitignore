@@ -1,7 +1,7 @@
 .sass-cache/
 _site/
-
 .DS_Store
+.jekyll-cache
 .jekyll-metadata
 _config.local.yml
 node_modules

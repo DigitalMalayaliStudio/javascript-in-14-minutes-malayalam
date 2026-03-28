@@ -1,7 +1,7 @@
 ```js
-if (window.location.hostname == 'jgthms.com') {
-  alert('Welcome on my domain! 🤗')
+if (window.location.hostname == 'digitalmalayali.in') {
+  alert('Welcome to my Mana! 🤗')
 } else {
-  alert('Please come back soon! 😉')
+  alert('Come back, my son! 😉')
 }
 ```
